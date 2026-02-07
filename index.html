@@ -107,7 +107,6 @@
             color: var(--dark-pink);
         }
 
-        /* Container to prevent layout jump while loading */
         .gif-container {
             min-height: 180px;
             display: flex;
@@ -125,129 +124,124 @@
 </head>
 <body>
 
-    <header>
-        <h1>Hey DUDU ❤️🙋🏻‍♀️</h1>
-        <p>Here's a week of love, surprises, and slightly too many hugs. 🫂😘</p>
-    </header>
+<header>
+    <h1>Hey DUDU ❤️🙋🏻‍♀️</h1>
+    <p>Here's a week of love, surprises, and slightly too many hugs. 🫂😘</p>
+</header>
 
-    <div class="calendar-grid" id="calendar"></div>
+<div class="calendar-grid" id="calendar"></div>
 
-    <div id="content-modal" onclick="closeModal()">
-        <div class="modal-body" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="gif-container">
-                <img id="modal-gif" src="" class="bubu-gif">
-            </div>
-            <h2 id="modal-title" style="color: var(--dark-pink);"></h2>
-            <p id="modal-text" style="line-height: 1.6; color: #444; font-weight: 500; font-family: 'Georgia', serif; font-style: italic;"></p>
+<div id="content-modal" onclick="closeModal()">
+    <div class="modal-body" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="gif-container">
+            <img id="modal-gif" src="" class="bubu-gif" referrerpolicy="no-referrer">
         </div>
+        <h2 id="modal-title" style="color: var(--dark-pink);"></h2>
+        <p id="modal-text" style="line-height: 1.6; color: #444; font-weight: 500; font-family: 'Georgia', serif; font-style: italic;"></p>
     </div>
+</div>
 
-    <script>
-        const weekData = [
-            { 
-                date: 7, 
-                name: "Rose Day", 
-                msg: "I was going to buy you a real rose, but I saw a dessert on the way and well... I ate it. 😋 So here’s a digital rose for you Dudu 🌹 - it never fades and it's zero calories 😌!", 
-                gif: "https://media.tenor.com/7vYvE0yC580AAAAi/bubu-dudu-bubu.gif" 
-            },
-            { 
-                date: 8, 
-                name: "Propose Day", 
-                msg: "Warning: I’m not poetic, but I am very good at keeping you. Will you be the artistic soul to my chaos? Stay by this Bubu’s side forever - otherwise, I’m taking your favorite t-shirts as a tax for my love. Your move! 😜💍", 
-                gif: "https://media.tenor.com/Z8N4u_WvK_IAAAAi/bubu-dudu-flowers.gif" 
-            },
-            { 
-                date: 9, 
-                name: "Chocolate Day", 
-                msg: "I promise to share my chocolates with you, but only the ones I don't like 😙. Just kidding! You’re the only person I’d actually give my last bite to. Stay sweet, my favorite human snack. 🍫☺️", 
-                gif: "https://media.tenor.com/hD8p9C0-u_cAAAAi/bubu-dudu-ice-cream.gif" 
-            },
-            { 
-                date: 10, 
-                name: "Teddy Day", 
-                msg: "Dudu, why would you ever need a toy when you have a me? 🤔 I’m basically a cute teddy bear that talks back and requires snacks. It’s a lifetime subscription, no cancellations allowed! 🧸💍", 
-                gif: "https://media.tenor.com/XGfL6L556vYAAAAi/bubu-dudu-hug.gif" 
-            },
-            { 
-                date: 11, 
-                name: "Promise Day", 
-                msg: "I promise to always annoy you and never let life be boring. But mostly, I promise to be your safe place whenever things get too loud. You're stuck with me. 🤞", 
-                gif: "https://media.tenor.com/YmK_H0tK-u8AAAAi/bubu-dudu-love.gif" 
-            },
-            { 
-                date: 12, 
-                name: "Hug Day", 
-                msg: "Warning: A giant virtual squeeze is heading your way! If you were here, I’d hug you so tight you'd turn into a pancake. 🥞! But missing you!🥺", 
-                gif: "https://media.tenor.com/4q-wYn-h3-oAAAAi/bubu-dudu-hugs.gif" 
-            },
-            { 
-                date: 13, 
-                name: "Kiss Day", 
-                msg: "Sending a big fat Mwah! through the screen. Consider this a deposit for all the real-life kisses I’m going to attack you with next time I see you! 💋", 
-                gif: "https://media.tenor.com/W7S74pX6qLMAAAAi/bubu-dudu-kiss.gif" 
-            },
-            { 
-                date: 14, 
-                name: "Valentine's Day", 
-                msg: "Happy Valentine’s Day! Your 'Bubu Premium' subscription has been renewed for another year ♾️ Note: You cannot cancel this subscription. There is no 'unsubscribe' button. Enjoy your permanent teddy bear! 🧸😤", 
-                gif: "https://media.tenor.com/ig8NlOTojJ0AAAAi/bubu-dudu-hearts.gif" 
-            }
-        ];
+<script>
+const weekData = [
+    { 
+        date: 7, 
+        name: "Rose Day", 
+        msg: "I was going to buy you a real rose, but I saw a dessert on the way and well... I ate it. 😋 So here’s a digital rose for you Dudu 🌹 - it never fades and it's zero calories 😌!", 
+        gif: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtuZnNiOHFubXhva2VieDU1b2tkbTQ3NTNpbWN5dHZxa3prYmE2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvYNSqBAMDVx8CEYkt/giphy.gif"
+    },
+    { 
+        date: 8, 
+        name: "Propose Day", 
+        msg: "Warning: I’m not poetic, but I am very good at keeping you. Will you be the artistic soul to my chaos? Stay by this Bubu’s side forever - otherwise, I’m taking your favorite t-shirts as a tax for my love. Your move! 😜💍", 
+        gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXc2cWFtZjlkZzJpZWdsY3E5ZXMzZnZ5dWwzazJpazcxemVvcTdmeCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sj93cJMsnoQJkqdgYD/giphy.gif"
+    },
+    { 
+        date: 9, 
+        name: "Chocolate Day", 
+        msg: "I promise to share my chocolates with you, but only the ones I don't like 😙. Just kidding! You’re the only person I’d actually give my last bite to. Stay sweet, my favorite human snack. 🍫☺️", 
+        gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3p4Y3RseDR5bWcyejRkZXhvc2hjdm5wejdjbHB6bGhsNWNmMmdsYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9NgiavRTlG7n0J0hVH/giphy.gif"
+    },
+    { 
+        date: 10, 
+        name: "Teddy Day", 
+        msg: "Dudu, why would you ever need a toy when you have a me? 🤔 I’m basically a cute teddy bear that talks back and requires snacks. It’s a lifetime subscription, no cancellations allowed! 🧸💍", 
+        gif: "https://medihttps://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHdwNDYzaGp2OGFvZ3E0dTQyNnp1cjRvanRwbmJiaGRjZ3V1MmZ6OCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dYfnPQ8FXSZhe/giphy.gifa.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif"
+    },
+    { 
+        date: 11, 
+        name: "Promise Day", 
+        msg: "I promise to always annoy you and never let life be boring. But mostly, I promise to be your safe place whenever things get too loud. You're stuck with me. 🤞", 
+        gif: "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3eDN5Z2VhZTJoZXI2Y3VzODYwYXoxYWh2eHB1MnBlbGdmYzB2c2hoNiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/0OgdJVNjbcIifqSb7U/giphy.gif"
+    },
+    { 
+        date: 12, 
+        name: "Hug Day", 
+        msg: "Warning: A giant virtual squeeze is heading your way! If you were here, I’d hug you so tight you'd turn into a pancake. 🥞! But missing you!🥺", 
+        gif: "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3eDN5Z2VhZTJoZXI2Y3VzODYwYXoxYWh2eHB1MnBlbGdmYzB2c2hoNiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/IzXiddo2twMmdmU8Lv/giphy.gif"
+    },
+    { 
+        date: 13, 
+        name: "Kiss Day", 
+        msg: "Sending a big fat Mwah! through the screen. Consider this a deposit for all the real-life kisses I’m going to attack you with next time I see you! 💋", 
+        gif: "https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ajEzaW9kMmI5cnlsY2J4Y3o1MDM4ZmkwZW9iZjhlNXIxa292NnJ6ZSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/qFmdpUKAFZ6rMobzzu/giphy.gif"
+    },
+    { 
+        date: 14, 
+        name: "Valentine's Day", 
+        msg: "Happy Valentine’s Day! Your 'Bubu Premium' subscription has been renewed for another year ♾️ Note: You cannot cancel this subscription. There is no 'unsubscribe' button. Enjoy your permanent teddy bear! 🧸😤", 
+        gif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnR0bWNsemozazRzYnZ0a3Y0YnBpeXdtNjRzYmsycTYydzd6MHc4YSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/4N1wOi78ZGzSB6H7vK/giphy.gif"
+    }
+];
 
-        function createCalendar() {
-            const container = document.getElementById('calendar');
-            const todayDate = new Date();
-            const today = todayDate.getDate();
-            const month = todayDate.getMonth() + 1; 
+function createCalendar() {
+    const container = document.getElementById('calendar');
+    const todayDate = new Date();
+    const today = todayDate.getDate();
+    const month = todayDate.getMonth() + 1;
 
-            weekData.forEach(day => {
-                const isLocked = (month < 2) || (month === 2 && today < day.date);
-                const card = document.createElement('div');
-                card.className = `day-card ${isLocked ? 'locked' : ''}`;
-                card.innerHTML = `
-                    <span>FEB ${day.date}</span>
-                    <h2>${day.name}</h2>
-                    <p style="font-size: 11px;">${isLocked ? '🔒 WAIT FOR IT' : '💖 OPEN SURPRISE'}</p>
-                `;
-                
-                card.onclick = () => {
-                    if (!isLocked) {
-                        openModal(day);
-                    } else {
-                        alert("Patience, Dudu! Bubu is still preparing this snack! Check back on the " + day.date + "th.");
-                    }
-                };
-                container.appendChild(card);
-            });
-        }
+    weekData.forEach(day => {
+        const isLocked = (month < 2) || (month === 2 && today < day.date);
+        const card = document.createElement('div');
+        card.className = `day-card ${isLocked ? 'locked' : ''}`;
+        card.innerHTML = `
+            <span>FEB ${day.date}</span>
+            <h2>${day.name}</h2>
+            <p style="font-size: 11px;">${isLocked ? '🔒 WAIT FOR IT' : '💖 OPEN SURPRISE'}</p>
+        `;
+        card.onclick = () => {
+            if (!isLocked) openModal(day);
+            else alert("Patience, Dudu! Bubu is still preparing this snack! Check back on the " + day.date + "th.");
+        };
+        container.appendChild(card);
+    });
+}
 
-        function openModal(day) {
-            const gifImg = document.getElementById('modal-gif');
-            gifImg.src = day.gif; 
-            document.getElementById('modal-title').innerText = day.name;
-            document.getElementById('modal-text').innerText = day.msg;
-            document.getElementById('content-modal').style.display = 'flex';
-        }
+function openModal(day) {
+    document.getElementById('modal-gif').src = day.gif;
+    document.getElementById('modal-title').innerText = day.name;
+    document.getElementById('modal-text').innerText = day.msg;
+    document.getElementById('content-modal').style.display = 'flex';
+}
 
-        function closeModal() {
-            document.getElementById('content-modal').style.display = 'none';
-        }
+function closeModal() {
+    document.getElementById('content-modal').style.display = 'none';
+    document.getElementById('modal-gif').src = '';
+}
 
-        function createHearts() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            const colors = ['#ff0000', '#ff69b4', '#ff4d6d'];
-            heart.innerText = '❤️';
-            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
+function createHearts() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerText = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
 
-        setInterval(createHearts, 400);
-        createCalendar();
-    </script>
+setInterval(createHearts, 400);
+createCalendar();
+</script>
+
 </body>
 </html>
