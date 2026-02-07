@@ -190,4 +190,64 @@
             { 
                 date: 14, 
                 name: "Valentine's Day", 
-                msg: "Happy Valentine’s Day! Your 'Bubu Premium' subscription has been renewed for another year �
+                msg: "Happy Valentine’s Day! Your 'Bubu Premium' subscription has been renewed for another year ♾️ Note: You cannot cancel this subscription. There is no 'unsubscribe' button. Enjoy your permanent teddy bear! 🧸😤", 
+                gif: "https://media.tenor.com/ig8NlOTojJ0AAAAi/bubu-dudu-hearts.gif" 
+            }
+        ];
+
+        function createCalendar() {
+            const container = document.getElementById('calendar');
+            const todayDate = new Date();
+            const today = todayDate.getDate();
+            const month = todayDate.getMonth() + 1; 
+
+            weekData.forEach(day => {
+                const isLocked = (month < 2) || (month === 2 && today < day.date);
+                const card = document.createElement('div');
+                card.className = `day-card ${isLocked ? 'locked' : ''}`;
+                card.innerHTML = `
+                    <span>FEB ${day.date}</span>
+                    <h2>${day.name}</h2>
+                    <p style="font-size: 11px;">${isLocked ? '🔒 WAIT FOR IT' : '💖 OPEN SURPRISE'}</p>
+                `;
+                
+                card.onclick = () => {
+                    if (!isLocked) {
+                        openModal(day);
+                    } else {
+                        alert("Patience, Dudu! Bubu is still preparing this snack! Check back on the " + day.date + "th.");
+                    }
+                };
+                container.appendChild(card);
+            });
+        }
+
+        function openModal(day) {
+            const gifImg = document.getElementById('modal-gif');
+            gifImg.src = day.gif; 
+            document.getElementById('modal-title').innerText = day.name;
+            document.getElementById('modal-text').innerText = day.msg;
+            document.getElementById('content-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('content-modal').style.display = 'none';
+        }
+
+        function createHearts() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            const colors = ['#ff0000', '#ff69b4', '#ff4d6d'];
+            heart.innerText = '❤️';
+            heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        setInterval(createHearts, 400);
+        createCalendar();
+    </script>
+</body>
+</html>
